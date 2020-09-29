@@ -1,0 +1,24 @@
+.container{
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.photo{
+    font-style: italic;
+    margin: 15px;
+}
+#abc2{
+font-style: italic;
+font-size: 18px;
+border-left-style: solid;
+border-left-color: grey;
+font-weight: normal;
+padding: 15px;
+}
+#abc3{
+list-style-type: disc;
+}
+
+#abc4{
+    list-style-type: decimal;
+}

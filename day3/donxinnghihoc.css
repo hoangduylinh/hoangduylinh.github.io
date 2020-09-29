@@ -1,0 +1,33 @@
+#abc{
+    font-size: 22px;
+    text-align: center ;
+    text-transform: uppercase;
+}
+.abc1{ font-size: 18;
+    text-align: center;
+}
+.ketthuc{
+    text-align: center;
+    margin-left: 60%;
+    font-size: 18px;
+    font-style: oblique;
+    }
+.noidung{
+    font-size: 18px;
+    word-break: normal;
+    line-height: 30px;
+    margin: auto;
+    
+}
+.container{
+    width: 60%;
+    margin: auto;
+    background-color: white;
+
+}
+
+body{
+    background-color: grey;
+}
+
+   
