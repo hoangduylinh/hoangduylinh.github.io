@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 300px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+.navigation-bar{ 
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: burlywood
+
+}
+.content{ 
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 500px;
+    background-color: greenyellow:
+    
+}
+.footer{
+
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: brown
+}
+.sidebar{
+    width: 30%;
+    height: 100%;
+    background-color: salmon;
+    float: left;
+}
+
+.artice{
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-color: springgreen;
+}
+.sidebar2{
+    width: 10% ;
+    height: 500px;
+    background-color: yellow;
+    clear: both;
+}
+.footer-sidebar{
+width: 20%;
+height: 100%;
+background-color: violet;
+margin-right: 20px;
+}
+
