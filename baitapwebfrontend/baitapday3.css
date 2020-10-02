@@ -1,25 +1,97 @@
-*{
-    margin: 0px;
-    box-sizing: border-box;
-}
 
-.red{
-    width: 50%;
-    height: 400px;
-    background-color: red;
-    float: left;
-}
-
-.green{
-    width: 25%;
-    height: 200px;
-    background-color: green;
-    float: left;}
-.blue{
-        width: 25%;
-        height: 200px;
-        background-color: blue;
-        }
         
+    *{
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .red{
+        width: 60%;
+        height: 400px;
+        background-color: red;
+        float: left;
+    }
+    .green{
+        width: 40%;
+        height: 200px;
+        background-color: green;
+        float: left;
+    }
+    .blue{
+        width: 40%;
+        height: 200px;
+        background-color:blue;
+        float: left; 
+    }
+    .doan1{
+        clear: both;
+        padding-top: 30px;
+    }
+    .a{
+        width: 48%;
+        height: 400px;
+        background-color: red;
+        float: left;
+        margin-right: 15px;
+    }
+    .b{
+        width: 50%;
+        height: 200px;
+        background-color: green;
+        float: left;
+    }
+    .c{
+        width: 50%;
+        height: 200px;
+        background-color:blue;
+        float: left; 
+    }
+    .doan2{
+        clear: both;
+        padding-top: 30px;
+    }
+    .a1{
+        width: 33%;
+        height: 400px;
+        background-color: red;
+        float: left;
+        
+    }
+    .a2{
+        width: 33%;
+        height: 400px;
+        background-color: green;
+        float: left;
+    }
+    .a3{
+        width: 33%;
+        height: 400px;
+        background-color:blue;
+        float: left; 
+    }
+    .doan3{
+        clear: both;
+        padding-top: 30px;
+        }
+    .b1{
+        width: 32%;
+        height: 400px;
+        background-color: red;
+        float: left;
+        margin-right: 15px;
+        
+    }
+    .b2{
+        width: 32%;
+        height: 400px;
+        background-color: green;
+        float: left;
+        margin-right: 15px;
+    }
+    .b3{
+        width: 32%;
+        height: 400px;
+        background-color:blue;
+        float: left; 
+    }
     
     
