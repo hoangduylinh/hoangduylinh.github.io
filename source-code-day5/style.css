@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.container {
+    height: 2000px;
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    padding: 0px 16px 0px 16px;
+    background-color: #34465c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.avatar {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 0px 30px;
+}
+
+.menu-list{
+    display: flex;
+}
+
+.menu-list a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+li{
+    /* display: block; */
+    list-style-type: none;
+    margin: 0px 15px;
+}
+
+.content {
+    margin: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner {
+    width: 70%;
+    height: 500px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.list-blog {
+    width: 30%;
+    height: 500px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shadow {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: contain;
+    background-color: #ff0000;
+}
+
+.widget {
+    height: 21.5%;
+    width: 100%;
+}
+
+
+.icon-up {
+    font-size: 40px;
+    color: #464646;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+/* css menu da cap */
+.menu-list {
+    position: relative;
+}
+
+
+.sub-menu {
+    position: absolute;
+    padding-top: 30px;
+    display: none;
+    
+}
+
+.sub-menu li {
+    padding: 10px;
+    background-color: teal;
+}
+
+#blog {
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+.menu-list li:hover .sub-menu{
+    display: block;
+}
+
+a:hover {
+    color: red;
+}
