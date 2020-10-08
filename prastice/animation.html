@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{
+            margin: 30px;
+            box-sizing: border-box;
+        }
+ .gd p{
+     text-transform: uppercase;
+     font-weight: 700;
+     font-size: 40px;
+     color: grey;
+     
+ }       
+ .gd1 p{
+     
+     width: 225px;
+     height: 50px;
+     border: black solid 2px;
+     border-radius: 4px;
+     color: white;
+     
+     margin-left: 0px ;
+     
+}
+.c{
+     background-color: burlywood;
+     animation-name: x;
+     animation-duration: 3s;
+     animation-timing-function: ease-in-out;
+     animation-iteration-count: infinite;
+     display: block;
+}
+.a{
+    display: none;
+}
+.b{
+    display: none;
+}
+
+@keyframes x{
+    from{
+        background-color: burlywood;  
+        display: block;
+    }
+    to{
+        background-color: yellow;
+        display: none;
+        
+    }
+}
+
+}
+    </style>
+</head>
+<body>
+    <div class="gd">
+        <p>
+            Start
+        </p>
+        <div class="gd1">
+           <p class="c">teaching </p> 
+           <p class="a"> learning</p>
+           <p class="b">coding</p>
+            
+        </div>
+        <p>
+            today
+        </p>
+       
+    </div>
+</body>
+</html>
