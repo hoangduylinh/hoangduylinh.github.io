@@ -1,0 +1,72 @@
+*{
+    margin: 20px;
+    box-sizing: border-box;
+}
+.d1{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.d1 a{
+    text-decoration: none;
+}
+.d1 img{
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 1s 0.5s ease-in-out;
+
+}
+.d1 figcaption{
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+   text-align: left;
+    transition-property: all;
+    transition-duration: 2s;
+}
+.d1 p{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.d1 img:hover{
+    transform: scale(1.3,1.3);
+}
+.d1 figcaption:hover{
+    color: coral;
+    
+}
+.d2{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.d2 img{
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 1s 0.5s ease-in-out;
+
+}
+.d2 figcaption{
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    text-align: left;
+    transition-property: all;
+    transition-duration: 2s;
+}
+.d2 p{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.d2 img:hover{
+    transform: scale(1.3,1.3);
+}
+.d2 figcaption:hover{
+    color: coral;
+    
+}
+
