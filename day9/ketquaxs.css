@@ -1,0 +1,79 @@
+*{
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.table1 ,td , th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 1020px;
+    padding: 10px;
+    margin-left: 170px;
+}
+.dac-biet{
+    color: red;
+}
+.den{
+    color: black;
+}
+a{
+    color: red;
+    text-align: center;
+    text-decoration: none;
+}
+.a1{
+background-color: burlywood;
+}
+.table1 td{
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+.red{
+    color: red;
+    background-color:  rgb(197, 194, 194);
+}
+.table1 .grey{
+background-color:  rgb(197, 194, 194);
+}
+.abc{
+    display: flex;
+   
+}
+.table2{
+    padding: 5px;
+    border-collapse: collapse;
+    margin-right: 20px;
+    margin-left: 170px;
+}
+
+ .table2 th:nth-child(1){
+    color: red;
+    text-align: center;
+    width:150px;
+}
+.table2 td:nth-child(2){
+    text-align: left;
+    width: 350px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.table3{
+    
+    border-collapse: collapse;
+    padding: 3px;
+}
+
+ .table3 th:nth-child(2){
+    color: red;
+    text-align: center;
+    width: 150px;
+}
+.table3 td:nth-child(1){
+    text-align: right;
+    width: 350px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.head{
+    background-color: rgb(197, 194, 194);
+}
