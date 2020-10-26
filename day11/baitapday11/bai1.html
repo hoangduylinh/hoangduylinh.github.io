@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function changeTemperature(do_c){
+            console.log(`chuyen tu do C sang do F la ket qua cua phep toan: 
+            ${do_c * 1.8 + 32}`)
+        }
+        changeTemperature(30)
+    </script>
+    <script>
+        function chuyenNhietDo(do_f){
+            console.log(`chuyen tu do F sang do C la ket qua cua phep toan: ${(do_f-32)/1.8}` )
+        }
+        chuyenNhietDo(100)
+    </script>
+    <script>
+        function Tinh_theki(x){
+            console.log(`Tinh the ki cua 1 nam bat ki la ket qua cua phep tinh:
+            ${Math.ceil(x/100)}`)
+        }
+        Tinh_theki(2020)
+    </script>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo">xin chao tat ca cac ban</p>
+    <script>
+       function myFunction() {
+  var str = "xin chao tat ca cac ban"  ; 
+  var res = str.slice(0, 10);
+  document.getElementById("demo").innerHTML = res;}
+</script>
+<script>
+
+    
+  
+</script>
+</body>
+</html>
