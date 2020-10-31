@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+// Tìm Số Âm
+function timSoAm (a){
+       for (let i = 0; i < a.length; i++)
+       if (a[i] < 0){
+           a[i] = 0;
+       }
+       return a
+   }
+// Tìm min max
+      function timMinMax (Array1){
+           
+    let min = Array1 [0];
+    let max = Array1 [0];
+    for (let i = 0; i < Array1.length; i++) {
+        if (min > Array1[i]) {
+            min = Array1[i];
+        }        
+    }
+    for (let j = 0; j < Array1.length; j++) {
+        if (max < Array1[j]) {
+            max = Array1[j];
+        }        
+    }
+    return "So nho nhat mang la "+ min + " so lon nhat cua mang la " + max + "."; 
+}
+        
+// Tìm số chẵn lẻ
+
+    function timSoChanLe (Arrs2){
+        let soLe;
+        let soChan;
+        soLe = Arrs2.filter ((number) => number%2 !=0);
+        soChan= Arrs2.filter ((number) => number%2 == 0);
+        return ( "vi tri so le dau tien la " + Arrs2.indexOf(soLe[0])) + " vi tri cua so chan cuoi cung la " 
+        + Arrs2.indexOf([soChan.length -1]);
+    }
+
+
+  function oddEven(x) {
+  let odd = x.filter((number) => number % 2 != 0);
+  let even = x.filter((number) => number % 2 == 0);
+  return `So le dau tien la ${odd[0]} va so chan cuoi cung la ${
+    even[even.length - 1]
+  }`;
+}
+</script>
+    
+</body>
+</html>

@@ -26,19 +26,57 @@
         }
         Tinh_theki(2020)
     </script>
-    <button onclick="myFunction()">Try it</button>
-
-    <p id="demo">xin chao tat ca cac ban</p>
-    <script>
-       function myFunction() {
-  var str = "xin chao tat ca cac ban"  ; 
-  var res = str.slice(0, 10);
-  document.getElementById("demo").innerHTML = res;}
-</script>
-<script>
-
     
-  
+<script>
+   function catChuoi(x) {
+  let y;
+  if (typeof x == "string") {
+    y = x;
+  } else {
+    y = x.toString(); 
+  }
+
+  return y.substring(0, 10) + "...";
+}
+</script> 
+<script>
+    function capFirstCharacter(a){
+    let b = a.toString().split(" ");
+    for (let i = 0; i < b.length; i++){
+        b[i] = b[i].toLowerCase();
+        b[i] = b[i].charAt(0).toUpperCase()+b[i].slice(1);
+    }
+    return b.join(" ");
+}
+   
+   function timSoAm (a){
+       for (let i = 0; i < a.length; i++)
+       if (a[i] < 0){
+           a[i] = 0;
+       }
+       return a
+   }
+
+   function timMinMax (a1){
+       let min = a1[0];
+       let max = a1[0];
+       for (let i = 0; i< a1.length; i++) {
+           if ( min > a1[i])
+                min = a1[i]
+       }
+       for (let j = 0; j<a1.length; j++){
+           if (max < a1[j])
+               max = a1[j]
+       }
+       return "so nho nhat trong chuoi la " + min + "so lơn nhat trong chuoi la " + max}
+   
+   function timChanLe (a2){
+       let soChan = a2.filter((number)=> number%2==0);
+       let soLe = a2.filter((number)=> number%2 != 0);
+       return ` vi tri so le dau tien la  ${soLe[0]} +  vi tri so chan cuoi cung la  ${soChan[soChan.length -1]}`;
+       }
+     
 </script>
+
 </body>
 </html>
