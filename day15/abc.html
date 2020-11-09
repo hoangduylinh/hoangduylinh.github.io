@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chuyển đổi tiền tệ</h1>
+    <input type="text" placeholder="Nhập tố tiền" id="input-money">
+    <select name="" id="select-currency">
+        <option value="dola">$</option>
+        <option value="euro">&euro;</option>
+    </select><br/><br/>
+    <button type="button" onclick="convert()">Chuyển đổi sang Việt Nam Đồng</button>
+
+    <script>
+        function convert(){
+            let value = document.getElementById("input-money").value;
+            let currency = document.getElementById("select-currency").value;
+            if(currency == "dola"){
+                let convertM = value*23060;
+                alert(`${value} $ = ${convertM} ₫`);
+            }
+
+            if(currency == "euro"){
+                let convertM = value*26719;
+                alert(`${value} € = ${convertM} ₫`);
+            }
+        }
+    </script>
+
+</body>
+</html>

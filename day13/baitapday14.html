@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Bài 1 Đếm số nguyên tố trong đoạn
+
+// Bài 2 hiển thị số ngày của tháng
+    function getNumberOfDays(year, month) {
+       let namNhuan = ((year % 4) == 0);
+    //    && ((year % 100) != 0 || (year % 400) == 0));
+       return [31, (namNhuan ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month -1];
+}
+// Bài 4 Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng.
+    function themX(x){
+        let newArr = x;
+        let max = x[0];
+        for(let i= 0; i < x.length; i++){
+            if (max< x[i]){
+                max = x[i];
+            }
+        }return ("mang moi sau khi them 'x' la: " + max + " x")
+    }
+// 5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần    
+// 6. Tính tổng các chữ số trong 1 số nguyên dương.
+    function sumUp (n) {
+        let soDu;
+        let sum = 0;
+        
+        while (n>0) {
+          soDu = n%10;
+          n = n/10;
+          sum +=soDu; 
+        }
+        return ("tổng các chữ số là " + sum)
+
+    }
+    </script>
+</body>
+</html>   

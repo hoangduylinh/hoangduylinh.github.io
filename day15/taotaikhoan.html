@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taotaikhoan</title>
+</head>
+<body>
+    <input id= "username" name= "user" placeholder="Write your name here" type="text"> <br>
+    <input id= "password" name= "password" placeholder="pass word" type="text"> <br>
+    <input id= "confirm" name= "confirm" placeholder="confirm pass word" type="text"> <br>
+    <button id="submit" onclick="register()">xac nhan</button>
+    <script>
+        function register(){
+            let userName= document.getElementById("username").value;
+            let password= document.getElementById("password").value;
+            let confirm= document.getElementById("confirm").value;
+
+            if (userName == "" || password== ""|| confirm == ""){
+                alert("Bạn cần điền đầy đủ thông tin")
+                return;
+            }
+            if (userName.length > 20){
+                alert ("Không được vượt quá 20 kí tự");
+                return;
+            }
+            if (password.length<6 || password.length > 32){
+                alert("password có độ dài từ 6 đến 32 kí tự");
+                return;
+            }
+            if (confirm !== password){
+                alert ("xác nhận mật khẩu chưa đúng");
+                return;
+            }
+            else{
+                alert("Đăng kí thành công")
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

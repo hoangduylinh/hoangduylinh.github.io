@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// bài 1 cho 2 số tìm số lớn hơn        
+
+        function biggerNumber (a){
+             if (a [0] > a[1] ){
+                  return a[0]
+        }
+             else {
+                  return a[1]
+        }
+        }
+// bài 2 tính giai thừa n!
+        function tinhGiaiThua (n){
+            let giaiThua = 1;
+            if (n == 0 && n==1){
+                return giaiThua ;
+            }
+            else if(n<0){
+                return ("ban can nhap so lon hon 0")
+            }
+            
+            else {
+                for (let i = 2; i <= n; i++)
+                giaiThua *= i;
+            }
+            return giaiThua;
+        }
+
+// bài 3 tìm số chẵn sắp xếp giảm dần
+        function findEvenNumber (a1){
+            let evenNumber = a1.filter((number)=> number%2 == 0);
+            let soChan = evenNumber[0];
+            for (let i = 0; i < evenNumber.length-1; i++){
+                for (let j = i+ 1; j < evenNumber.length; j++){
+                    if (evenNumber[i] < evenNumber[j]){
+                        soChan = evenNumber[j];
+                        evenNumber[j] = evenNumber[i];
+                        evenNumber[i] = soChan;
+                    }
+                }
+            } return evenNumber;
+        }
+
+ // bài 4 xác định mùa trong năm   
+
+ function getSeason(){
+    switch (new Date().getMonth()) {
+       case 0:
+       case 1:
+       case 2:
+           month = "xuân" ;  
+        break;
+       case 3:
+       case 4:
+       case 5:
+           month = "hè" ;
+        break;
+       case 6:
+       case 7:
+       case 8:
+           month="thu";
+        break;
+       case 9:
+       case 10:
+       case 11:
+           month="đông"  ;         
+       break;
+   }
+   return `hôm nay là ngày ${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}  và đang là mùa ${month}`
+
+}
+// bài 5 Cho một mảng các chuỗi, viết hàm sắp xếp mảng theo thứ tự bảng chữ cái.
+
+function textSort(words) {
+   let new_Words = [];
+   return (new_Words = words.split("").sort().join(""));
+   
+} 
+
+// bài 6 viết hàm đảo ngược 1 chuỗi cho trước
+function textReverse(words) {
+   let new_Words = [];
+   return (new_Words = words.split("").reverse().join(""));
+   
+} 
+function bai6(string){
+    var newstring=""
+    for(var i=string.length-1;i>=0;i--){
+        newstring +=string[i]
+    }
+    return newstring
+}
+// bài 7 tìm số nguyên tố
+
+    function xacDinhSoNguyenTo(snt){
+    let soNguyenTo = true;
+    if (snt<2){
+        soNguyenTo= false;
+    }
+    else if (snt == 2){
+        soNguyenTo = true;
+    }
+    else if (snt %2==0){
+        soNguyenTo = false;
+
+    }
+    else {
+        for (let i = 3; i< Math.sqrt(snt); i+=2)
+        {
+            if (stn % i == 0){
+                soNguyenTo = false;
+            }
+            else {soNguyenTo = true}
+    }
+    
+}
+    if (soNguyenTo == true){
+        return (snt + " là số nguyên tố ");
+    }
+        else{
+        return (snt + " không phải là số nguyên ");
+    }
+}  
+
+function kiemtrasnt(n)
+{   
+    var flag = false;
+    if (n < 2 ){
+        flag = false;
+    }
+    else if (n == 2 || n == 3){
+        flag = true;
+    }
+    else{
+        
+        for (var i = 2; i <= (n /2); i++)
+        {
+            if (n % i == 0){
+                flag = false;
+                break;
+            }
+            else {flag = true}
+        }
+    }
+    if (flag == true){
+        return n + " là số nguyên tố";
+       
+    }
+    else{
+        return n + " không phải là số nguyên tố ";
+    }
+}
+// bài 8 kiểm tra số hoàn hảo
+function kiemTraSoHoanHao (n){
+    let sum = 0;
+    let list = [];
+    for (let i = 1; i < n; i++){
+    if ( n % i == 0) {sum +=i}
+   
+};
+    
+if (sum == n){
+    list.push(n)
+    }
+    return list;
+}
+function sohoanhao(x)
+            {   
+                let list = [];
+                for (y=1; y<x; y++) 
+                    {
+                        let tonguoc=0;
+                        for (i=1; i<=y; i++)
+                            {
+                                if (y % i == 0)
+                                    {
+                                        tonguoc = tonguoc + i;
+                                    }
+                            }
+                        if (tonguoc == y)
+                            {
+                                list.push(y);
+                            }
+                    }
+                return list;
+            }
+// bai 9 ve hcn
+
+        function veHCN(x,y){
+    for(let i = 0; i < y; i++){
+        for(let j = 0; j < x; j++){
+            document.write("*");
+        }
+        document.write("<br/>");
+    }
+}
+// bai 10 ve hinh tam giac
+
+     function vehtg(h)
+            {   
+                if (h<1)
+                    {
+                        return "Mời nhập lại số";
+                    }
+                else
+                    {   
+                        for (i=1; i<=h; i++)
+                            {
+                                for (y=1; y<h*2; y++)
+                                    {
+                                        if (y<=h-i || y>=h+i)
+                                            {
+                                                document.write("&nbsp&nbsp");
+                                            }
+                                        else
+                                            {
+                                                document.write(`*`);
+                                            }
+                                    }
+                                    document.write(`<br/>`);
+                            }
+                    }
+            }
+ </script>
+    
+    
+</body>
+</html> 
