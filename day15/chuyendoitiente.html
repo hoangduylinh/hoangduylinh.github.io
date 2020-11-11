@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doi-tien</title>
 </head>
+
 <body>
     <H2>Currency exchange</H2>
     <input type="radio" id="euro" name="currency" value="euro">Euro<br>
     <input type="radio" id="usd" name="currency" value="usd">Usd<br>
-    <input id= "doi-tien" name= "doi-tien" placeholder="nhấp số tiền" type="text">
+    <input id="doi-tien" name="doi-tien" placeholder="nhấp số tiền" type="text">
     <button id="check" onclick="check()">Convert sang VND</button>
     <script>
         function check() {
-     let euro = document.getElementById("euro").value;
-     let usd = document.getElementById("usd").value;
-     let doiTien = document.getElementById("doi-tien").value;
-     if (euro == "euro"){
-         let chuyenDoi= doiTien*27000;
-         alert(`${doiTien} = ${chuyenDoi} VND`);
-     }
-     if (usd = "usd"){
-         let chuyenDoi= doiTien*23000;
-         alert(`${doiTien} = ${chuyenDoi} VND`);
-     }
-    }
+            let euro = document.getElementById("euro").checked;
+            let usd = document.getElementById("usd").checked;
+            let doiTien = document.getElementById("doi-tien").value;
+            if (euro == "euro") {
+            
+                let chuyenDoi = doiTien * 27000;
+                alert(`${doiTien} = ${chuyenDoi} VND`);
+            } else if (usd == "usd") {
+                
+                let chuyenDoi = doiTien * 23000;
+                alert(`${doiTien} = ${chuyenDoi} VND`);
+            }
+        }
     </script>
-   
+
 </body>
+
 </html>

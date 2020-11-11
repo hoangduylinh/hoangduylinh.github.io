@@ -8,37 +8,162 @@
 <body>
     <script>
 // Bài 1 Đếm số nguyên tố trong đoạn
+function DemSoNT(a, b) {
+    let dem = 0;
+    for (let i = a; i <= b; i++) {
+        if(kiemTraSoNT(i)){
+            dem++;
+        }
+    }
+    return dem;
+}
 
+function kiemTraSoNT(x){
+    if(x < 2){
+        return false;
+    } 
+    for(let i = 2; i <= Math.sqrt(x); ++i){
+        if(nbr % i == 0){
+            return false;
+        } 
+    }
+    return true;
+}
 // Bài 2 hiển thị số ngày của tháng
+  
     function getNumberOfDays(year, month) {
-       let namNhuan = ((year % 4) == 0);
-    //    && ((year % 100) != 0 || (year % 400) == 0));
+       let namNhuan = (((year % 4) == 0) && ((year % 100) != 0 || (year % 400) == 0));
        return [31, (namNhuan ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month -1];
 }
 // Bài 4 Chèn phần tử có giá trị X vào phía sau phần tử có giá trị lớn nhất trong mảng.
-    function themX(x){
-        let newArr = x;
-        let max = x[0];
-        for(let i= 0; i < x.length; i++){
-            if (max< x[i]){
-                max = x[i];
+    function themX(arr, x){
+       
+        let max = [0];
+        for(let i= 0; i < arr.length; i++){
+            if (max< arr[i]){
+                max = arr[i];
             }
-        }return ("mang moi sau khi them 'x' la: " + max + " x")
+        }
+        let addX = arr.splice(arr.indexOf(max +1) , 0, x);
+    return arr;
     }
-// 5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần    
+// 5. Chèn phần tử có giá trị X vào mảng sao cho mảng vẫn có thứ tự tăng dần 
+function chenX (arr, x){
+    arr.push(x)
+    for(let i = 0; i <= arr.length; i++){
+        for(let j = 0; j <= arr.length; j++){
+            if(arr[j] > arr[j + 1]){
+                let temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+}
 // 6. Tính tổng các chữ số trong 1 số nguyên dương.
     function sumUp (n) {
         let soDu;
         let sum = 0;
         
         while (n>0) {
-          soDu = n%10;
+          soDu = Math.floor(n%10);
           n = n/10;
           sum +=soDu; 
         }
         return ("tổng các chữ số là " + sum)
 
     }
+
+    // 7. Kiểm tra tính đối xứng của một số nguyên.
+function checkDoiXung(x){
+    let doiXung = 0;
+    let rem;
+    let temp = x;
+    while(temp != 0){
+        rem = Math.floor(temp % 10)
+        doiXung = Math.floor((doiXung * 10) + rem)
+        temp = Math.floor(temp/10)
+    }
+    if(doiXung == x){
+        return `${x} Là số đối xứng`
+    }else{
+        return `${x} Không là số đối xứng`
+    }
+}
+
+// 8. Giải phương trình bậc 2: ax^2 + bx + c = 0.
+function giaiPT(a,b,c){
+    let res
+    res = (b*b) - (4*a*c)
+    if(res < 0){
+        return `Phương trình vô nghiệm`
+    }else if(res == 0){
+        return `Phương trình có 1 nghiệm \nx = ${-b/2*a}`
+    }else{
+        return `Phương trình có 2 nghiệm :\nx1 = ${ -b + Math.sqrt(res) / (2*a) } \nx2 = ${ -b - Math.sqrt(res) / (2*a) }`
+    }
+}
+
+// 9. Vẽ hình chữ nhật rỗng kích thước m, n:
+function hinhChuNhat(m, n) {
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (i == 1 || j == 1 || i == m || j == n) {
+                document.write("*")
+            }
+            else {
+                document.write("&nbsp&nbsp")
+            }
+        }
+        document.write("<br>")
+    }
+}
+
+// 10.  Vẽ tam giác vuông chiều cao h:
+function tamGiacVuong(h) {
+    for (let i = 1; i <= h; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+}
+
+// 11. Vẽ tam giác cân ngược:
+function tamGiacCanNguoc(h) {
+    for (let i = h; i >= 1; i--) {
+        for (let j = 1; j <= h - i; j++) {
+            document.write("&nbsp")
+        }
+        for (let k = 1; k <= i; k++) {
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+}
+
+// 12. Vẽ chữ X
+
+
+function veX(h){
+    if(h<=0){
+        return `Chiều cao phải lớn hơn 0!`;
+    }else if(h%2==0){
+        return `Chiều cao phải là số lẻ`;
+    }else{
+        for(let i=1; i<=h; i++){
+            for(let j=1;j<=h;j++){
+                if(j==i ||i+j==h+1){
+                    document.write("*");
+                }else{
+                    document.write("&ensp;");
+                }
+            }
+            document.writeln("<br/>");
+        }
+    }
+}
     </script>
 </body>
 </html>   
