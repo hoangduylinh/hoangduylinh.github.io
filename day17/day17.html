@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ // Bài 1: Viết hàm chuyển đổi độ C sang độ F
+ function convertC (x){
+     let doF= (1.8*(x) + 32);
+     return `${doF} F`;
+ }       
+
+ // Bài 2: Tìm số lớn thứ 2 trong mảng
+ function timSoLonThu2 (arr){
+  let result =  arr.sort(function(a, b){return b-a});
+  let seocondNum = result[1];
+  return seocondNum;
+}
+
+// Bài 3: Cho 1 mảng các chuỗi bất kỳ có độ dài khác nhau. Hãy viết hàm tìm ra chuỗi có độ dài lớn nhất
+// ** hàm sort: dùng 2 vòng lặp lồng nhau **//
+
+function longestStr (arr){
+let index = 0;    
+let lenMax= 0;
+for(i=0; i< arr.length; i++){
+let len = arr[i].length;
+if (len > lenMax){
+    lenMax = len;
+    index = i;
+}
+
+}
+return arr[index];
+}
+
+
+// Bài 4: dùng substring để so sánh(indexOf, lastIndexOf, sort)
+/**Bài 4: Viết hàm có 2 tham số là 2 chuỗi string và target khác rỗng, dùng để kiểm tra chuỗi string có kết
+thúc bởi chuỗi target hay không. Kết quả trả về là true hoặc false**/
+function confirmEnding(string, target) {
+  
+  return string.endsWith(target); 
+}
+
+
+/* bài 5:  Cho 1 mảng chỉ chứa các phần tử có kiểu dữ liệu number, string và boolean. Hãy kiểm tra xem
+trong mảng đó có phần tử nào bị lặp lại hay không (xuất hiện 2 lần trở lên). Kết quả trả về true (nếu lặp)
+hoặc false (nếu không lặp)*/
+//lấy phần tử đầu tiên so sánh vs các phần tử còn lại rồi đến phần tử thứ 2...nếu trùng dừng
+function kiemTraLap(arr){
+   
+for (let i=0; i<arr.length;i++){
+
+    for(let j = i+1 ; j<arr.length; j++){
+
+        if (arr[i]==arr[j]){
+
+        return true;
+    }
+    
+       
+    }
+}
+return false;
+
+}
+
+    </script>
+
+
+</body>
+</html>
