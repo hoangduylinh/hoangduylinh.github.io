@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: auto;
+            box-sizing: border-box;
+
+        }
+    </style>
+
+<body>
+    <button type="button" onclick="changeColor()">Đổi màu chữ</button>
+    <button type="button" onclick="changeBgColor()"> Đổi màu nền</button>
+    <button type="button" onclick="copyContent()"> Copy đoạn 1 vào đoạn 2</button>
+    <button type="button" onclick="changeFontSize()">Thay đổi font chữ body</button>
+    <button type="button" onclick="increaseFontSize()"> Tăng font chữ đoạn 1 </button>
+    <button type="button" onclick="decreaseFontSize()">Giảm font chữ đoạn 1</button>
+
+    <h1>Cực NÓNG!!! 1 đội bóng Hàn Quốc muốn ký hợp đồng với Văn Hậu</h1>
+    <p id="p1">Đoàn Văn Hậu đang là một trong những tài năng triển vọng nhất của bóng đá Việt Nam. Mặc dù mới chỉ 21
+        tuổi nhưng hậu vệ người gốc Thái Bình luôn góp mặt trong những chiến tích của bóng đá Việt Nam kể từ năm 2018
+        tới nay.
+
+        Cực NÓNG!!! 1 đội bóng Hàn Quốc muốn ký hợp đồng với Văn Hậu - 1
+
+        Văn Hậu sở hữu thân hình lý tưởng
+
+        Hậu vệ cánh trái của CLB Hà Nội từng được CLB của Hà Lan, Heerenveen mượn ở mùa giải trước. Tuy nhiên, dịch
+        Covid-19 khiến các giải bóng đá tại Hà Lan phải kết thúc sớm. Điều này khiến cho Văn Hậu mới chi được thi đấu 4
+        phút cho đội hình chính và một vài trận đấu cho đội U21 Heerenveen. Mặc dù vậy, những ngày tháng ở Hà Lan của
+        Văn Hậu không hề uổng phí.</p> <br>
+    <p id="p2">Cầu thủ sinh năm 1999 đã còn màn "lột xác" đáng kinh ngạc khi thân hình trở nên vạm vỡ thay vì mảnh khảnh
+        như xưa. Hơi đáng tiếc cho Văn Hậu là cầu thủ này không được thi đấu nhiều trong giai đoạn 2 của V-League 2020
+        do dính chấn thương bất ngờ. </p>
+    <p id="p3"> Người hâm mộ đang chờ đợi màn tái xuất thực sự của Văn Hậu ở V-League 2021. Tuy nhiên, điều này có thể
+        sẽ không xảy ra nếu như Văn Hậu xuất ngoại lần thứ hai. Theo tin từ tờ FM Korea của Hàn Quốc, một đội bóng đang
+        thi đấu tại K-League muốn chiêu mộ Đoàn Văn Hậu để chuẩn bị cho mùa giải mới. </p>
+    <script>
+        function changeColor() {
+            document.getElementById("p1").style.color = "blue";
+            document.getElementById("p2").style.color = "yellow";
+            document.getElementById("p3").style.color = "red";
+
+        }
+        function changeBgColor() {
+            document.body.style.backgroundColor = "pink";
+        }
+        function copyContent() {
+            let doan1 = document.getElementById("p1");
+            let clone = doan1.cloneNode(true);
+            document.getElementById("p2").appendChild(clone);
+
+        }
+        function changeFontSize() {
+            document.body.style.fontSize = "x-large";
+
+
+        }
+        function increaseFontSize() {
+            document.getElementById("p1").style.fontSize = "larger";
+
+        }
+
+
+
+        function decreaseFontSize() {
+            document.getElementById("p1").style.fontSize = "smaller";
+
+        }
+
+    </script>
+</body>
+
+</html>
