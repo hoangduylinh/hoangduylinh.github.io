@@ -9,6 +9,7 @@
         * {
             margin: auto;
             box-sizing: border-box;
+            font-size: 20px;
 
         }
     </style>
@@ -19,7 +20,7 @@
     <button type="button" onclick="copyContent()"> Copy đoạn 1 vào đoạn 2</button>
     <button type="button" onclick="changeFontSize()">Thay đổi font chữ body</button>
     <button type="button" onclick="increaseFontSize()"> Tăng font chữ đoạn 1 </button>
-    <button type="button" onclick="decreaseFontSize()">Giảm font chữ đoạn 1</button>
+    <button type="button" onclick="decreaseFontSize()">Giảm font chữ đoạn 2</button>
 
     <h1>Cực NÓNG!!! 1 đội bóng Hàn Quốc muốn ký hợp đồng với Văn Hậu</h1>
     <p id="p1">Đoàn Văn Hậu đang là một trong những tài năng triển vọng nhất của bóng đá Việt Nam. Mặc dù mới chỉ 21
@@ -41,6 +42,7 @@
         sẽ không xảy ra nếu như Văn Hậu xuất ngoại lần thứ hai. Theo tin từ tờ FM Korea của Hàn Quốc, một đội bóng đang
         thi đấu tại K-League muốn chiêu mộ Đoàn Văn Hậu để chuẩn bị cho mùa giải mới. </p>
     <script>
+
         function changeColor() {
             document.getElementById("p1").style.color = "blue";
             document.getElementById("p2").style.color = "yellow";
@@ -52,28 +54,48 @@
         }
         function copyContent() {
             let doan1 = document.getElementById("p1");
-            let clone = doan1.cloneNode(true);
-            document.getElementById("p2").appendChild(clone);
+            let doan2 = document.getElementById("p2");
+            doan1.innerText = doan2.innerText;
 
         }
-        function changeFontSize() {
-            document.body.style.fontSize = "x-large";
+        function changeFontSize(x) {
+            document.body.style.fontSize = x + "px";
 
 
         }
-        function increaseFontSize() {
-            document.getElementById("p1").style.fontSize = "larger";
+        function increaseFontSize(p1) {
+            let fontSize = document.getElementById("p1");
+            let getFont = window.getComputedStyle(fontSize, null).getPropertyValue("font-size");
+            let px = parseFloat(getFont);
+            if (fontSize.style.fontSize <= "30px") {
 
+                fontSize.style.fontSize = px + 1 + "px";
+            }
+            else {
+
+                alert`font chữ không được vượt quá 30px`;
+
+            }
         }
 
+        function decreaseFontSize(p2) {
+            let fontSize = document.getElementById("p2");
+            let getFont = window.getComputedStyle(fontSize, null).getPropertyValue("font-size");
+            let px = parseFloat(getFont);
+            fontSize.style.fontSize = px - 1 + "px";
 
+            if (fontSize.style.fontSize <= "10px"){
 
-        function decreaseFontSize() {
-            document.getElementById("p1").style.fontSize = "smaller";
+                alert `font chữ không được nhỏ hơn 10 px`
+            }
 
-        }
+           
+            }
+           
+            
+            
 
-    </script>
+   </script>
 </body>
 
 </html>
