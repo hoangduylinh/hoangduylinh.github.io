@@ -52,14 +52,16 @@
             <tr>
                 <td><input class="button" type="button" value="C" onclick="clean()"></td>
                 <td><input class="button" type="button" value="del" onclick="del()"></td>
-                <td><input class="button" type="button" value="/" onclick="insertNum('/')"></td>
-                <td><input class="button" type="button" value="*" onclick="insertNum('*')"></td>
+                <td><input class="button" type="button" value=":" onclick="insertNum('/')"></td>
+                <td><input class="button" type="button" value="x" onclick="insertNum('*')"></td>
 
             </tr>
-            <td><input class="button" type="button" value="!" onclick="giaiThua('!')"></td>
-            <td><input class="button" type="button" value="sqrt" onclick="canBac2()"></td>
-            <td><input class="button" type="button" value="^" onclick="binhPhuong()"></td>
-            <td><input class="button" type="button" value="+" onclick="insertNum('+')"></td>
+            <tr>
+                <td><input class="button" type="button" value="!" onclick="giaiThua('!')"></td>
+                <td><input class="button" type="button" value="sqrt" onclick="canBac2()"></td>
+                <td><input class="button" type="button" value="^" onclick="binhPhuong()"></td>
+                <td><input class="button" type="button" value="+" onclick="insertNum('+')"></td>
+            </tr>
 
             <tr>
                 <td><input class="button" type="button" value="1" onclick="insertNum(1)"></td>
@@ -92,11 +94,13 @@
     </div>
 
     <script>
-        
-        function insertNum(x) {
+        // lấy giá trị 
 
-            document.getElementById("fill_in").value = document.getElementById("fill_in").value + x;
+        function insertNum(num) {
+
+            document.getElementById("fill_in").value = document.getElementById("fill_in").value + num;
         }
+        // tính giai thừa
         function giaiThua(x) {
             let giai_thua = 1;
             if (document.getElementById("fill_in").value == 0 || document.getElementById("fill_in").value == 1) {
@@ -109,6 +113,7 @@
             }
 
         }
+        // tính căn bậc 2
 
 
         function canBac2(x) {
@@ -116,22 +121,26 @@
             let result = Math.sqrt(document.getElementById("fill_in").value);
             document.getElementById("fill_in").value = result;
         }
+        // tính bình phương
         function binhPhuong(x) {
 
             let result = Math.pow(document.getElementById("fill_in").value, document.getElementById("fill_in").value)
             document.getElementById("fill_in").value = result;
         }
+        // lấy kết quả của phép tính
 
         function equal() {
 
             let result = eval(document.getElementById("fill_in").value);
             document.getElementById("fill_in").value = result;
         }
+        // xóa dữ liệu về o
         function clean() {
 
             document.getElementById("fill_in").value = "";
 
         }
+        // xóa đi 1 phần tử
         function del() {
 
             let del = document.getElementById("fill_in").value;
