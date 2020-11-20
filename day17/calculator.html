@@ -53,7 +53,7 @@
                 <td><input class="button" type="button" value="C" onclick="clean()"></td>
                 <td><input class="button" type="button" value="del" onclick="del()"></td>
                 <td><input class="button" type="button" value=":" onclick="insertNum('/')"></td>
-                <td><input class="button" type="button" value="x" onclick="insertNum('*')"></td>
+                <td><input class="button" type="button" value="x" name= "multiply" onclick="phepNhan('x')"></td>
 
             </tr>
             <tr>
@@ -100,6 +100,13 @@
 
             document.getElementById("fill_in").value = document.getElementById("fill_in").value + num;
         }
+        function phepNhan(y){
+            document.getElementById("fill_in").value = document.getElementById("fill_in").value + y;
+            
+            let ketQua = (document.getElementsByName("multiply").value).replace("x","*");
+            document.getElementById("fill_in").value = ketQua;
+        }
+
         // tính giai thừa
         function giaiThua(x) {
             let giai_thua = 1;
@@ -133,6 +140,7 @@
 
             let result = eval(document.getElementById("fill_in").value);
             document.getElementById("fill_in").value = result;
+            
         }
         // xóa dữ liệu về o
         function clean() {
