@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(77, 231, 231);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            margin: 7px;
+
+        }
+
+        .logo {
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 50px;
+        }
+
+        .sub-menu {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 480px;
+            height: 40px;
+            background-color: rgb(112, 112, 253);
+            color: white;
+
+
+        }
+
+
+        .sub-menu2 {
+            font-size: 22px;
+        }
+
+
+
+        .body {
+            background-color: rgb(112, 112, 253);
+            height: calc(100vh - 81px);
+            margin: 7px;
+        }
+
+        .menu-mobile {
+            display: none;
+        }
+
+        button {
+
+            width: 40px;
+            height: 40px;
+            font-size: 25px;
+            color: white;
+            background-color: rgb(112, 112, 253);
+            border: solid 1px black;
+
+        }
+
+        .sub-menu-mobile {
+            list-style: none;
+            text-align: center;
+
+        }
+
+        .sub-menu-mobile li {
+            width: 100%;
+            height: 30px;
+            margin: 2px;
+            padding: 5px;
+            color: white;
+            border: solid 1px black;
+            background-color: rgb(112, 112, 253);
+
+
+        }
+
+        @media(max-width: 768px) {
+            body {
+                background-color: rgb(248, 212, 198);
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .menu-mobile {
+                display: block;
+
+            }
+
+            .sub-menu-mobile {
+                margin: 7px;
+                margin-left: -35px;
+                display: none;
+            }
+            button{
+                margin: 7px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-mobile">
+        <button onclick="myButton()" i class="fas fa-bars"></i></button>
+
+        
+
+            <ul class="sub-menu-mobile" id="show-menu">
+                <li>Trang chủ</li>
+                <li>Menu 1</li>
+                <li>Menu 2</li>
+                <li>Menu 3</li>
+            </ul>
+      
+
+    </div>
+
+    <div class="menu">
+
+        <div class="logo">LOGO </div>
+        <div class="sub-menu">
+            <div class="sub-menu1">Menu 1</div>
+            <div class="sub-menu2">|</div>
+            <div class="sub-menu3">Menu 2</div>
+            <div class="sub-menu2">|</div>
+            <div class="sub-menu1">Menu 3</div>
+        </div>
+    </div>
+    <div class="body"></div>
+    <script>
+        function myButton() {
+
+            let showMenu = document.getElementById("show-menu");
+            if (showMenu.style.display === "none") {
+                showMenu.style.display = "block";
+            }
+            else {
+                showMenu.style.display = "none";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
