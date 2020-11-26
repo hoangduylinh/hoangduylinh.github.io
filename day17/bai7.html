@@ -64,12 +64,12 @@
         }
         .body1{
             background-color:rgb(112, 112, 253) ;
-            width: 880px;
+            width: 60%;
             height: calc(100vh - 81px);
         }
         .body2{
             background-color:rgb(112, 112, 253) ;
-            width: 440px;
+            width: 39%;
             height: calc(100vh - 81px);
         }
         .menu-mobile{
@@ -108,11 +108,16 @@
                 display: none;
                 
             }
+            .menu{
+                position: relative;
+            }
             .logo{
                 position: absolute;
-                top: 7px;
-                left: 55px;
+                top:-53px;
+                left: 50%;
+                transform: translate(-50%);
                 width: 100px;
+                z-index: 100;
                 
             }
             .sub-menu{
@@ -120,20 +125,28 @@
             }
             button{
                 margin: 7px;
-                position: relative;
+               
             }
             
             .menu-mobile{
                 display: block;
+               
+               
                 
             }
             #show-menu{
                 display: none;
-               
+                position: absolute;
+                left: 52%;
+                transform: translate(-50%);
+                width: 80%;
+              
             }
             .body1{
+               
                 margin-bottom:20px ;
                 width: 100%;
+               
             }
             .body2{
                 width: 100%;
