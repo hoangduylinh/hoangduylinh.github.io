@@ -272,33 +272,28 @@ i:hover{
     }
   
     .body1{
-        /* margin:auto; */
+       
         width: 100%;
         position: relative;
     }
     .body2{
-        /* margin: auto; */
+      
         width: 100%;
     }
-
+   
     .right-header{
         display: none;
     }
     .banner img{
-        width: 100%;
-        margin-top: 30px;
-        margin-bottom: -40px;
+       width: 100%;
+       margin-top: 30px;
+       margin-bottom: -40px;
     }
     .sign-up{
         display: none;
     }
    
-    .sub-content{
-        display: grid;
-       grid-template-columns: auto;
-       width: 100%;
-       
-    }
+  
     .left-footer{
         width: 50%;
         display: flex;
@@ -332,32 +327,19 @@ i:hover{
         width: 100%;
       
     }
-    .comment{
-        margin-bottom: 20px;
+    .sub-content{
+        display: grid;
+        grid-template-columns: auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
     }
-    .sub-content-article{
-        font-family: 'Playfair Display', serif; 
-        font-size: 14px;
-        line-height: 24px;
-        color: #626262;
-        margin-bottom: 50px;
+   .photo{
+       margin-top: -90px;
+       width: 100%;
+   }
+    .photo-header a{
+        font-size: 22px;
+        
     }
-    .load-more{
-        margin-bottom: 50px;
-    }
-    /*...........................*/
-    .content-photo{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .content-photo1{
-        width: 100%;
-        margin-top: 50px;
-        margin-bottom: 10px;
-    }
-    .content-photo img{
-        width: 100%;
-    }
-    .content-photo1 img{
-        width: 100%;
-    }
+    
+}

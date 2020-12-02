@@ -443,19 +443,31 @@ i:hover{
         width: 100%;
       
     }
-
-     .content{
-        width: 400px;
-        
+    
+    .side-bar{
+        display: none;
     }
-  .content img{
-      width: 400px;
-  } 
+    .side-bar-content{
+        width: 100%;
+        margin-left:20px;
+        margin-right: 20px;
+    }
+    .content img{
+        width: 100%;
+    }
+    .content-article{
+        padding-right: 30px;
+    }
+    .content-article-small{
+        padding-right: 30px;
+    }
+
+   
  
     .sub-article{
         display: grid;
         grid-template-columns: auto;
-        
+        grid-column-gap: 10px;
         background-color: white;
     }
     .sub-article-container p {
@@ -476,5 +488,8 @@ i:hover{
 .photo-header{
     margin-top: 2px;
     margin-bottom: 25px;
+}
+.guest-comment{
+    width: 100%;
 }
 }
