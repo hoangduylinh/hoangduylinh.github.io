@@ -1,0 +1,480 @@
+*{
+    margin : 0px;
+    box-sizing: border-box;
+   
+    
+}
+.body1{
+    width: 1064px;
+    margin: auto;
+   
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    
+    
+   
+}
+.header a{
+    text-decoration: none;
+    
+}
+.minomo{
+   width: 489px;
+}
+.minimo a{
+    font-family: 'Inconsolata', monospace;
+    color: #000000;
+    font-size: 30px;
+    
+}
+.right-header{
+    display: flex;
+    justify-content: space-between;
+    width: 575px;
+}
+.right-header a{
+    color: #626262;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 24px;
+    
+}
+.banner{
+   margin-top: 70px;
+}
+
+
+
+.content-header a{
+    text-decoration: none;
+    font-family: 'Playfair Display', serif; 
+    font-size: 30px;
+    color: #626262;
+    
+}
+.content-header{
+    margin-bottom: 30px;
+}
+.content-article{
+    font-family: 'Playfair Display', serif; 
+    font-size: 14px;
+    color: #626262;
+    margin-bottom: 46px;
+    line-height: 24px;
+}
+.photodiary{
+    margin-bottom: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4ad9e;
+    font-size: 14px;
+}
+.content-photo{
+    margin-bottom: 60px;
+}
+.content-photo1{
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+.content-article-small{
+    font-family: 'Playfair Display', serif; 
+    font-size: 14px;
+    color: #626262;
+    font-style: italic;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.icon{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 57px;
+    margin-bottom: 72px;
+    
+}
+.icon > div{
+    padding-right: 15px;
+}
+.icon i{
+    color: #626262;
+}
+.sub-article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 437px;
+    background-color: #e2e0e0;
+    
+}
+.sub-article-container{
+    position: relative;
+    margin-bottom: 66px;
+    
+}
+
+ .sub-article-container p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4ad9e;
+    font-size: 14px;
+    top: 67px;
+    position: absolute ;
+
+}
+.photo-header{
+    margin-top: 24px;
+}
+.photo-header a{
+  
+    text-decoration: none;
+    font-family: 'Playfair Display', serif; 
+    font-size: 20px;
+    color: #626262;
+}
+/* side bar */
+
+.side-bar-content{
+display: flex;
+justify-content: space-between;
+width: 983px;
+margin-top: 94px;
+margin-left: 80px;
+
+}
+.content{
+    width: 661px;
+}
+.side-bar{
+    width: 275px;
+}
+.about-me{
+    margin-bottom: 64px;
+}
+.about-me1{
+    font-family: 'Playfair Display', serif; 
+    font-size: 24px;
+    color: #626262;
+   
+}
+.about-me-content{
+    font-family: 'Playfair Display', serif; 
+    font-size: 12px;
+    line-height: 20px;
+    color: #626262;
+    
+}
+.side-bar-icon{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.side-bar-icon > div {
+    padding-right: 10px;
+    
+}
+.side-bar-icon i{
+    
+    font-size: 12px;
+    color: #626262;
+}
+.top-post{
+    margin-bottom: 51px;
+}
+.top-post a{
+    text-decoration: none;
+    font-family: 'Playfair Display', serif; 
+    font-size: 16px;
+    color: #626262;
+}
+.top-post li{
+    color: #626262;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.top-post p{
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4ad9e;
+    font-size: 12px;
+}
+.top-post-head{
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4ad9e;
+    font-size: 14px;
+}
+.banner-spot p{
+    
+    font-family: 'Ubuntu', sans-serif;
+    color:white;
+    font-size: 48px;
+  
+   
+}
+.banner-spot span{
+    font-family: 'Ubuntu', sans-serif;
+    color:white;
+    font-size: 14px;
+}
+.banner-spot img{
+    opacity: 0.2;
+    
+}
+.banner-spot{
+    position: relative;
+    background-color: #b4ad9e;
+}
+.banner-slogan{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 42px;
+}
+/*....................................*/
+
+.guest-comment{
+    margin: auto;
+    width: 1064px;
+    
+}
+.comment-2{
+   
+    margin-left: 80px;
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4ad9e;
+    font-size: 14px;
+}
+.comment-1{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    
+}
+.comment-1 img{
+    margin-right: 20px;
+}
+.comment-1 span{
+    font-family: 'Playfair Display', serif; 
+    font-size: 14px;
+    color: #626262;
+    line-height: 24px;
+    margin-top: 15px;
+}
+
+.guest-comment img{
+    border-radius: 50%;
+  
+}
+.discusstion{
+    margin-left: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.discusstion input{
+    height:76px;
+    width: 91%;
+    padding-left: 5px;
+} 
+.connect{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+   
+}
+.connect > div{
+    padding-right: 20px;
+}
+.connect-with{
+    font-family: 'Ubuntu', sans-serif;
+    color: #b4ad9e;
+    font-size: 14px;
+}
+.connect a{
+    color: #b4ad9e;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    height: 99px;
+    width: 100%;
+    background-color: #e2e0e0;
+    margin-top: 93px;
+}
+.left-footer{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+   
+    align-items: center;
+    padding-left: 70px ;
+}
+.left-footer a{
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 24px;
+   color: #000000;
+   
+    text-decoration: none;
+
+}
+.right-footer{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    
+    align-items: center;
+    padding-right: 70px;
+   
+}
+.right-footer a{
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+.right-footer i{
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+}
+button:hover{
+    background-color: #c9c6c6;
+    border: white solid 1px;
+}
+a:hover{
+    background-color: #c9c6c6;
+    
+}
+i:hover{
+    color: blue;
+}
+.menu-mobile{
+    display: none;
+}
+.menu-mobile button{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: white;
+    background-color:#c9c6c6 ;
+    border: solid 1px #c9c6c6;
+   
+}
+.sub-menu-mobile{
+    list-style: none;
+    text-align: center;
+}
+.sub-menu-mobile a{
+    text-decoration: none;
+    font-family: 'Playfair Display', serif; 
+    font-size: 16px;
+    line-height: 25px;
+    color: #626262;
+}
+.sub-menu-mobile a:hover{
+    background-color: #c9c6c6;
+}
+@media  (max-width: 768px ){
+   
+    .header{
+        top:-190px;
+        right: 20px;
+        position: absolute;
+        z-index: 1;
+    }
+  
+    .body1{
+        
+        width: 100%;
+        position: relative;
+    }
+   
+    .right-header{
+        display: none;
+    }
+    .banner img{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: -50px;
+    }
+    .sign-up{
+        display: none;
+    }
+   
+  
+    .left-footer{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        align-items: center;
+        padding-left: 70px ;
+    }
+   
+    .right-footer{
+      
+        display: flex;
+        flex-direction: column;
+        line-height: 30px;
+        align-items: center;
+        padding-right: 70px;
+       
+    }
+    footer{
+        height: 20vh;
+    }
+    .menu-mobile{
+        display: block;
+       
+    }
+    #show-menu{
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+      
+    }
+
+     .content{
+        width: 400px;
+        
+    }
+  .content img{
+      width: 400px;
+  } 
+ 
+    .sub-article{
+        display: grid;
+        grid-template-columns: auto;
+        
+        background-color: white;
+    }
+    .sub-article-container p {
+        display: none;
+    
+    }
+.guest-comment{
+    
+    width: 100%;
+    margin-top: 320px;
+    margin-bottom: -50px;
+}
+.discusstion input{
+    height:65px;
+    width: 77%;
+    padding-left: 5px;
+} 
+.photo-header{
+    margin-top: 2px;
+    margin-bottom: 25px;
+}
+}
