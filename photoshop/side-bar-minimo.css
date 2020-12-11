@@ -428,7 +428,7 @@ i:hover{
         line-height: 50px;
         align-items: center;
         
-        margin-left:150px ;
+        margin-left:40px ;
     }
    
     .right-footer{
@@ -460,7 +460,7 @@ i:hover{
         display: none;
     }
     .side-bar-content{
-        width: 100%;
+        width: 95%;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -524,6 +524,7 @@ i:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: -50px;
 }
 
 }

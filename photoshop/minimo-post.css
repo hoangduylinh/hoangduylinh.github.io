@@ -326,7 +326,7 @@ i:hover{
    
   
     .left-footer{
-        
+        margin-left: 70px;
         display: flex;
         flex-direction: column;
         line-height: 50px;
@@ -410,6 +410,7 @@ i:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 120px;
 }
 
 }
