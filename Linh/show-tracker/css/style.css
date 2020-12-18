@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    padding: 0 !important;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/back-ground.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    /* height: 1130px; */
+    
+}
+
+.navbar {
+    padding: 0;
+   
+}
+.navbar-brand {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: black;
+    line-height: 23px;
+}
+.navbar span{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #540CFA;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+.nav-link{
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.upper-form a{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+    padding-right: 30px;
+}
+.navbar button{
+    Width :102px;
+    Height :32px;
+    color:white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #540CFA;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 3px;
+    border: none;
+}
+.navbar button:hover{
+    background-color: #834ffb;
+    cursor: pointer;
+}
+.navbar a:hover{
+    color:#834ffb;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+}
+/* upper content*/
+.upper-content h1{
+    margin-top: 150px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 72px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.content-article-p{
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.upper-email form{
+    position: relative;
+    max-width: 450px;
+    height: 53px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 130px;
+}
+.upper-email button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 53px;
+    width: 142px;
+    background: #540CFA;
+    border: none;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.upper-email button:hover{
+    background-color: #834ffb;
+    cursor: pointer;
+}
+.upper-email input{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.3; 
+    border: none;
+    width: 308px;
+    padding-right: 5px;
+    padding-left: 15px;
+    position: absolute;
+    left: 0;
+    top:25px;
+}
+.upper-email input:focus{
+    outline: 0;
+    box-shadow: none;
+}
+.upper-email p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #540CFA;
+    position: absolute;
+    top:5px;
+    left:15px;
+}
+.upper-logo{
+    margin-bottom: 181px;
+}
+.upper-logo p{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+}
+.upper-logo img{
+    padding-right: 30px;
+    opacity: 0.3;
+}
+.iphone{
+    max-width: 370px;
+    margin: 0 auto;
+    
+}
+/*...........blue-rec........*/
+.blue-rec{
+    margin-top: -280px;
+    margin-bottom: -180px;
+}
+
+/* feature */
+.feature-up{
+    max-width: 610px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.feature-up h1{
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 63px;
+    margin-bottom: 30px;
+}
+.feature-up p{
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 32px;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+.feature-up-1 p{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+}
+.feature-icon{
+    text-align: center;
+}
+.feature-icon h3{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+.feature-icon p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+.feature-icon a{
+color: #540CFA;
+
+}
+.feature-icon i{
+   font-size: 11px;
+   padding-left: 5px;
+}
+.feature-icon a:hover{
+    color: #834ffb;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*..............carosel................*/
+.responsive{
+    width: 90%;
+    height: 330px;
+}
+
+/*...........
+..............
+....................
+........................
+.................................
+.......................................*/
+
+@media (max-width: 768px) {
+    .container {
+        margin-right: 17px;
+        margin-left: 17px;
+    }
+    .container-fluid{
+      background-image: none;
+    }
+    .navbar{
+        padding-right: 15px;
+        
+    }
+    .upper-content h1{
+        font-weight: 900;
+        font-size: 42px;
+        line-height: 48px;
+        margin-top: 40px;
+    }
+    .upper-content p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .upper-logo{
+        margin-top: -80px;
+        margin-bottom: 40px;
+    }
+    .upper-logo p{
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 13px;
+        letter-spacing: 2px;
+       
+    }
+    .upper-logo img{
+        padding-right: 15px;
+    }
+   
+    .blue-rec{
+        display: none;
+    }
+
+    /*...........Feature............*/
+
+    .feature-up{
+        text-align: left;
+    }
+    .feature-up h1{
+        font-weight: 900;
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+    .feature-up p{
+        font-size: 18px;
+        line-height: 27px;
+        
+    }
+    .feature-up-1 p{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .feature-icon{
+        text-align: left;
+        margin-top: -50px;
+        margin-bottom: 80px;
+    }
+    .feature-icon h3{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: -20px;
+    }
+    .feature-icon p{
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: -20px;
+        opacity: 0.7;
+        margin-bottom: -20px;
+    }
+    .feature-icon a{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .iphone{
+        background-image: url(../img/Group\ 39.png), url(../img/Rectangle\ -blue.png);
+        background-repeat: no-repeat;
+        background-position: right top ,left bottom ;
+       
+    }
+}

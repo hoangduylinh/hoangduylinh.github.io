@@ -1,94 +1,108 @@
-<!DOCTYPE html> 
-<html> 
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick-1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick-1.8.1/slick/slick-theme.css"/>
+  </head>
+  <style>
+	body{
+		background-color: brown;
+	}
+	.responsive{
+		width: 90%;
+    height: 330px;
+    margin:auto;
+    position: relative;
+	}
 
-<head> 
-	<!--auto compiled css & Js-->
-	<script type="text/javascript"
-			src="//code.jquery.com/jquery-1.9.1.js"> 
-</script> 
-	<link rel="stylesheet"
-		type="text/css"
-		href="/css/result-light.css"> 
-	
-	<script type="text/javascript"
-			src= 
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"> 
-</script> 
-	<link rel="stylesheet"
-		type="text/css"
-		href= 
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
-	<link rel="stylesheet"
-		type="text/css"
-		href= 
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
-	<!-- JavaScript for adding 
-	slider for multiple images 
-	shown at once-->
-	<script type="text/javascript"> 
-		$(window).load(function() { 
-			$(".carousel .item").each(function() { 
-				var i = $(this).next(); 
-				i.length || (i = $(this).siblings(":first")), 
-				i.children(":first-child").clone().appendTo($(this)); 
-				
-				for (var n = 0; n < 4; n++)(i = i.next()).length || 
-				(i = $(this).siblings(":first")), 
-				i.children(":first-child").clone().appendTo($(this)) 
-			}) 
-		}); 
-	</script> 
+	.slick-arrow::before{
+  font-size: 45px;
+ 
+  }
+  /* .slick-next{
+    position: absolute;
+    top: 50%;
+    right:0px
+  } */
+  </style>
+  <body>
+ 
+  <div class="responsive">
+    <div class="card">
+      <img src="/images/show-tracker/carousel-1.png" class="card-img-top" alt="...">
+     
+    </div>
+    <div class="card">
+      <img src="/images/show-tracker/carousel-2.png" class="card-img-top" alt="...">
+      
+      
+    </div>
+    <div class="card">
+      <img src="/images/show-tracker/carousel-3.png" class="card-img-top" alt="...">
+      
+    </div>
+    <div class="card">
+      <img src="/images/show-tracker/carousel-4.png" class="card-img-top" alt="...">
+     
+    </div>
+    <div class="card">
+      <img src="/images/show-tracker/carousel-5.png" class="card-img-top" alt="...">
+      
+    </div>
+    <div class="card">
+      <img src="/images/show-tracker/carousel-6.png" class="card-img-top" alt="...">
+      
+    </div>
+    <div class="card">
+      <img src="/images/show-tracker/carousel-7.png" class="card-img-top" alt="...">
+      
+    </div>
+    
+    
+    
+  </div>
 
-</head> 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+  <script src="slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
 
-<body> 
-	<!-- container class for bootstrap card-->
-	<div class="container"> 
-		<!-- bootstrap card with row name myCarousel as row 1-->
-		<div class="carousel slide" id="myCarousel"> 
-			<div class="carousel-inner"> 
-				<div class="item active"> 
-					<div class="col-xl-12 col-md-6"> 
-						<a href="#"> 
-						<img src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20190709143904/391.png"
-							class="img-responsive"> 
-					</a> 
-					</div> 
-				</div> 
-				<div class="item"> 
-					<div class="row-xl-2 row-md-12"> 
-						<a href="#"> 
-						<img src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20190709143850/1382.png"
-							class="img-responsive"> 
-					</a> 
-					</div> 
-				</div> 
-				<div class="item"> 
-					<div class="col-xl-2 col-md-6"> 
-						<a href="#"> 
-						<img src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20190709143855/223-1.png"
-							class="img-responsive"> 
-					</a> 
-					</div> 
-				</div> 
-			</div> <a class="left carousel-control"
-					href="#myCarousel"
-					data-slide="prev"> 
-		<i class="glyphicon glyphicon-chevron-left"> 
-		</i> 
-		</a> 
-			<a class="right carousel-control"
-			href="#myCarousel"
-			data-slide="next"> 
-			<i class="glyphicon glyphicon-chevron-right"> 
-			</i> 
-		</a> 
+  <script>
+$('.responsive').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    
+  ]
+});
+  </script>
 
-		</div> 
-	</div> 
-</body> 
-
-</html> 
+  </body>
+</html>
