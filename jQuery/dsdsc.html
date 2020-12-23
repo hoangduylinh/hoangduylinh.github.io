@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="light.css" id="theme">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    
+</head>
+<body>
+    <div id="calculator">
+        <div class="time"></div>
+        <div>
+            <button id="mode">Light Mode 🌙</button>
+        </div>
+        <div id="display"></div>
+        <table>
+            <tr>
+                <td colspan="3"><button class="btn delete clean" style="width: 197px" >AC</button></td>
+                <td><button class="btn option1 giaithua">a!</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn option1 square">a&#178;</button></td>
+                <td><button class="btn option1 sqrt">&#x221a;</button></td>
+                <td><button class="btn option1 percent">%</button></td>
+                <td><button class="btn option multi" value="×">×</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn number" value="7">7</button></td>
+                <td><button class="btn number" value="8">8</button></td>
+                <td><button class="btn number" value="9">9</button></td>
+                <td><button class="btn option divide" value="÷">÷</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn number" value="4">4</button></td>
+                <td><button class="btn number" value="5">5</button></td>
+                <td><button class="btn number" value="6">6</button></td>
+                <td><button class="btn option plus" value="+">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn number" value="1">1</button></td>
+                <td><button class="btn number" value="2">2</button></td>
+                <td><button class="btn number" value="3">3</button></td>
+                <td><button class="btn option minus" value="-">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn delete undo"><i style="font-size: 22px;" class="material-icons">backspace</i></button></td>
+                <td><button class="btn number" value="0">0</button></td>
+                <td><button class="btn delete dot" value=".">.</button></td>
+                <td><button class="btn equal">=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        //Khi mới load trang xong, vì chưa có số nào trên màn hình nên sẽ không ấn được dấu "x", "÷", "="
+        $(function(){
+            $('table button.multi').attr('disabled',true);
+            $('table button.divide').attr('disabled',true);
+            $('table button.equal').attr('disabled',true);
+        });
+
+        //Thực hiện các hành động bên trong khi ấn vào các nút số, phép tính, dấu '.'
+        $('table button.number, table button.option, table button.dot').on('click', function(){
+            char = $(this).html(); //Lấy giá trị vừa click
+            result = $('#calculator #display').html(); //Lấy chuỗi giá trị trong ô phép tính
+            $('#calculator #display').html(result + char); //Thêm giá trị vừa click vào ô giá trị hiện tại
+            $('table button.equal').removeAttr('disabled'); //bỏ vô hiệu hóa dấu =
+            $('table button.option').removeAttr('disabled'); //bỏ vô hiệu hóa phép toán
+        });
+
+        //Khi click vào dấu x thì sẽ không click tiếp dấu x nữa, cũng ko click đc dấu "÷"
+        $('table button.multi').on('click', function(){
+            $('table button.multi').attr('disabled',true);
+            $('table button.divide').attr('disabled',true);
+        });
+
+        //Tương tự bên trên
+        $('table button.divide').on('click',function(){
+            $('table button.divide').attr('disabled',true);
+            $('table button.multi').attr('disabled',true);
+        });
+
+        //Khi ấn nút AC thì ô giá trị sẽ hiện rỗng
+        $('table button.clean').on('click', function(){
+            $('#calculator #display').html("");
+        });
+
+        //Khi ấn nút xóa, sẽ xóa từng phần tử 1
+        $('table button.undo').on('click', function(){
+            result = $('#calculator #display').html();
+            $('#calculator #display').html(result.substring(0, result.length - 1));
+        });
+
+        //Thực hiện phép tính %
+        $('table button.percent').on('click', function(){
+            result = $('#calculator #display').html();
+            $('#calculator #display').html(result / 100);
+        });
+
+        //Thực hiện phép tính mũ 2
+        $('table button.square').on('click', function(){
+            result = $('#calculator #display').html();
+            if(result == ''){
+                $('#calculator #display').html(0);
+            }else{
+               $('#calculator #display').html(result * result); 
+            }
+        });
+
+        //Thực hiện phép tính căn bậc 2
+        $('table button.sqrt').on('click',function(){
+            result = $('#calculator #display').html();
+            $('#calculator #display').html(Math.sqrt(result)); 
+        });
+
+
+        //Thực hiện phép tính giai thừa
+        $('table button.giaithua').on('click',function(){
+            result = $('#calculator #display').html();
+            if(result < 0){
+                $('#calculator #display').html('Error!');
+            }else if(result == 0){
+                $('#calculator #display').html(1);
+            }else{
+                let res = 1;
+                for (let i = 1; i <= result; i++) {
+                    res = res * i;
+                }
+                $('#calculator #display').html(res);
+            }
+        })
+
+        //Thực thi kết quả trong ô giá trị, thay thế x = *, ÷ = /
+        $('table button.equal').on('click', function(){
+            result = $('#calculator #display').html();
+            result = result.replaceAll("×" , "*");
+            result = result.replaceAll("÷" , "/");
+            $('#calculator #display').html(eval(result));
+        });
+
+        //Thay đổi theme 
+        $('#calculator button#mode').click(function(){
+
+            if ($('#theme').attr("href") == "light.css")
+            {
+                $('#theme').attr("href","dark.css");
+                $('#mode').html("Dark Mode 🌙");
+            }
+            else if($('#theme').attr("href") == "dark.css")
+            {
+                $('#theme').attr("href","light.css");
+                $('#mode').html("Light Mode 🌙");
+            }
+        });
+
+        //Set thời gian
+        $(function setTime(){
+            let clock = new Date();
+            if (clock.getMinutes() < 10){
+                $('#calculator .time').html(clock.getHours() + " : " + "0" + clock.getMinutes());
+            }else if (clock.getMinutes() == 0){
+                $('#calculator .time').html(clock.getHours() + " : 00");
+            }else{
+                $('#calculator .time').html(clock.getHours() + " : " + clock.getMinutes());
+            }
+            setInterval(setTime,1000);
+        });
+        
+    </script>
+</body>
+</html>
