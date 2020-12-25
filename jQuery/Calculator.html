@@ -7,7 +7,7 @@
     <title>calculator</title>
     <link rel="stylesheet" href="calculator.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jQuery/2.1.3/jQuery.min.js"></script>
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -26,8 +26,8 @@
                 <tr>
                     <td><input class="button" type="button" value="C" onclick="clean()"></td>
                     <td><input class="button" type="button" value="del" onclick="del()"></td>
-                    <td><input class="button divide" type="button" value=":" onclick="insertNum(':')"></td>
-                    <td><input class="button multi" type="button" value="x"  onclick="phepNhan('x')"></td>
+                    <td><input class="button divide" type="button" value=":" onclick="insertNum('/')"></td>
+                    <td><input class="button multi" type="button" value="x"  onclick="phepNhan('*')"></td>
     
                 </tr>
                 <tr>
@@ -69,83 +69,67 @@
     </div>
 
     <script>
-        //Khi mới load trang xong, vì chưa có số nào trên màn hình nên sẽ không ấn được dấu "x", "÷", "="
-        $(function(){
-            $('table input.multi').attr('disabled',true);
-            $('table input.divide').attr('disabled',true);
-            $('table input.equal').attr('disabled',true);
-        });
+          // lấy giá trị 
 
-        //Thực hiện các hành động bên trong khi ấn vào các nút số, phép tính, dấu '.'
-        $('table input.number, table input.option, table input.dot').on('click', function(){
-            char = $(this).html(); //Lấy giá trị vừa click
-            result = $('.on-screen .header').html(); //Lấy chuỗi giá trị trong ô phép tính
-            $('.on-screen .header').html(result + char); //Thêm giá trị vừa click vào ô giá trị hiện tại
-            $('table input.equal').removeAttr('disabled'); //bỏ vô hiệu hóa dấu =
-            $('table input.option').removeAttr('disabled'); //bỏ vô hiệu hóa phép toán
-        });
+          
+          function insertNum(num) {
 
-        //Khi click vào dấu x thì sẽ không click tiếp dấu x nữa, cũng ko click đc dấu "÷"
-        $('table button.multi').on('click', function(){
-            $('table button.multi').attr('disabled',true);
-            $('table button.divide').attr('disabled',true);
-        });
-
-        //Tương tự bên trên
-        $('table button.divide').on('click',function(){
-            $('table button.divide').attr('disabled',true);
-            $('table button.multi').attr('disabled',true);
-        });
-
-        //Khi ấn nút AC thì ô giá trị sẽ hiện rỗng
-        $('table button.clean').on('click', function(){
-            $('#calculator #display').html("");
-        });
-
-        //Khi ấn nút xóa, sẽ xóa từng phần tử 1
-        $('table button.undo').on('click', function(){
-            result = $('#calculator #display').html();
-            $('#calculator #display').html(result.substring(0, result.length - 1));
-        });
-
-        //Thực hiện phép tính %
-        $('table button.percent').on('click', function(){
-            result = $('#calculator #display').html();
-            $('#calculator #display').html(result / 100);
-        });
-
-        //Thực hiện phép tính mũ 2
-        $('table button.square').on('click', function(){
-            result = $('#calculator #display').html();
-            if(result == ''){
-                $('#calculator #display').html(0);
-            }else{
-               $('#calculator #display').html(result * result); 
-            }
-        });
-
-        //Thực hiện phép tính căn bậc 2
-        $('table button.sqrt').on('click',function(){
-            result = $('#calculator #display').html();
-            $('#calculator #display').html(Math.sqrt(result)); 
-        });
+document.getElementById("fill_in").value = document.getElementById("fill_in").value + num;
+}
+function phepNhan(y){
+document.getElementById("fill_in").value = document.getElementById("fill_in").value + y;
 
 
-        //Thực hiện phép tính giai thừa
-        $('table button.giaithua').on('click',function(){
-            result = $('#calculator #display').html();
-            if(result < 0){
-                $('#calculator #display').html('Error!');
-            }else if(result == 0){
-                $('#calculator #display').html(1);
-            }else{
-                let res = 1;
-                for (let i = 1; i <= result; i++) {
-                    res = res * i;
-                }
-                $('#calculator #display').html(res);
-            }
-        })
+}
+
+// tính giai thừa
+function giaiThua(x) {
+let giai_thua = 1;
+if (document.getElementById("fill_in").value == 0 || document.getElementById("fill_in").value == 1) {
+    document.getElementById("fill_in").value = giai_thua;
+} else {
+    for (let i = 2; i <= document.getElementById("fill_in").value; i++) {
+        giai_thua *= i;
+    }
+    document.getElementById("fill_in").value = giai_thua;
+}
+
+}
+// tính căn bậc 2
+
+
+function canBac2(x) {
+
+let result = Math.sqrt(document.getElementById("fill_in").value);
+document.getElementById("fill_in").value = result;
+}
+// tính bình phương
+function binhPhuong(x) {
+
+let result = Math.pow(document.getElementById("fill_in").value, document.getElementById("fill_in").value)
+document.getElementById("fill_in").value = result;
+}
+// lấy kết quả của phép tính
+
+function equal() {
+
+let result = eval(document.getElementById("fill_in").value);
+document.getElementById("fill_in").value = result;
+
+}
+// xóa dữ liệu về o
+function clean() {
+
+document.getElementById("fill_in").value = "";
+
+}
+// xóa đi 1 phần tử
+function del() {
+
+let del = document.getElementById("fill_in").value;
+document.getElementById("fill_in").value = del.substring(0, del.length - 1);
+
+}
 
         //Thực thi kết quả trong ô giá trị, thay thế x = *, ÷ = /
         $('table button.equal').on('click', function(){
