@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 150px 150px 150px 150px;
+            grid-gap: 30px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .grid-items {
+
+            border-radius: 50%;
+            height: 150px;
+        }
+
+        .border{
+            border: 5px solid rgb(81, 81, 214);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <div class="grid-items"></div>
+        <div class="grid-items"></div>
+        <div class="grid-items"></div>
+        <div class="grid-items"></div>
+        <div class="grid-items"></div>
+        <div class="grid-items"></div>
+        <div class="grid-items"></div>
+        <div class="grid-items"></div>
+
+    </div>
+    <script>
+
+
+        const color = ['#CCCCCC', '#FF0000', '#FF6600', '#336699', '#666666', '#003366', '#000000', '#FFCC00']
+
+        for (let i = 0; i < color.length; i++) {
+            $($('.grid-items')[i]).css('background-color', color[i]);
+        }
+        // // tạo funtion bấm nút sẽ xóa phần tử
+        //         $('.grid-items').click(function(){
+        //         $(this).css('display', 'none') // hàm jquerry (thêm $)
+        //         // this.remove(); dom xóa hẳn 
+
+        // tạo boder cho hình tròn
+        $('.grid-items').click(function () {
+           $(this).toggleClass('border');
+            // if ($(this).css('border') == '0px none rgb(0, 0, 0)') {
+
+
+            //     $(this).css('border', '3px solid rgb(0,0,0)');
+            // }
+            // else {
+            //     $(this).css('border', '0px none rgb(0,0,0)')
+            // }
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

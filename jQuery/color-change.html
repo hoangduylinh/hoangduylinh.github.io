@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+.container{
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-gap: 30px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.round{
+    
+    border-radius: 50%;
+    height: 250px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+    </div>
+    <script>
+        const colors = ['#CCCCCC', '#FF0000', '#FF6600', '#336699', '#666666', '#003366', '#000000', '#FFCC00']
+        
+    //     $(function () {
+    //     for (let i = 0; i < colors.length; i++) {
+    //       const element = $("<div class='round'></div>");
+    //       element.css("background-color", colors[i]);
+    //       $(".container").append(element);
+    //     }
+    //   });
+
+      $(function () {
+        for (let i = 0; i < colors.length; i++) {
+          const element = $("<div class='round'></div>");
+          element.css("background-color", colors[i]);
+          element.click(function(){
+              element.remove();
+          })
+          $(".container").append(element);
+        }
+      });
+
+    </script>
+</body>
+</html>
